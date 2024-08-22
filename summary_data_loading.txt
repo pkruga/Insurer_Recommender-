@@ -1,0 +1,33 @@
+
+## Data Loading and Cleaning Summary
+
+### 1. Data Loading:
+
+- The dataset was successfully loaded into a pandas DataFrame.
+- Initial inspection revealed the presence of both numerical and categorical features.
+
+### 2. Data Cleaning:
+
+- **Data Type Conversion:**
+    - Numeric columns (starting from the third column) were converted to float.
+    - The 'Date' column was converted to datetime format.
+- **Handling Duplicates:**
+    - No duplicate rows were found in the dataset.
+- **Insurer Name Standardization:**
+    - Variations in insurer names were identified and replaced with consistent naming conventions.
+    - Entries related to the defunct 'Resolution Insurance Company' were removed.
+- **Removal of Industry Totals:**
+    - Rows representing industry totals were identified and removed.
+    - Rows with dates in the year 1970 were also removed.
+- **Outlier Handling:**
+    - Numerical columns were analyzed for outliers using box plots.
+    - Ratio columns ('Claims_declined_ratio_(%)', 'Claims_closed_as_no_claims_ratio (%)', 'Claim_payment_ratio_(%)') were capped at 100% to address unrealistic values.
+
+### 3. Final Dataset:
+
+- The cleaned dataset is now free of duplicates, inconsistencies in insurer names, industry totals, and unrealistic ratio values.
+- The dataset has been saved as 'cleaned_data.csv'.
+
+### Next Steps:
+
+- Exploratory Data Analysis (EDA) can now be performed on the cleaned dataset to gain insights and inform further modeling decisions.

@@ -1,0 +1,15 @@
+
+## Modelling
+
+In this step, we aimed to develop a predictive model for reliability scores based on the preprocessed data. We experimented with various regression algorithms, including:
+
+- **Linear Regression:** A simple linear model to establish a baseline.
+- **Random Forest:** An ensemble method using multiple decision trees for improved accuracy and robustness.
+- **Gradient Boosting:** Another ensemble technique that sequentially builds trees to minimize prediction errors.
+- **XGBoost:** A highly optimized gradient boosting algorithm known for its efficiency and performance.
+- **ElasticNet:** A linear model with regularization to prevent overfitting and improve generalization.
+- **Stacking Regressor:** An ensemble method that combines predictions from multiple base models to potentially achieve even better performance.
+
+We evaluated the models using metrics such as Root Mean Squared Error (RMSE), R-squared, and Mean Absolute Error (MAE). Additionally, we performed k-fold cross-validation to obtain a more reliable estimate of model performance on unseen data.
+
+The results indicated that the **ElasticNet** model achieved the lowest RMSE and demonstrated strong performance in cross-validation, suggesting it as a suitable candidate for predicting reliability scores. However, further model refinement and feature engineering could be explored to potentially enhance the results.

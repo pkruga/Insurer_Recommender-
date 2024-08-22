@@ -1,0 +1,12 @@
+
+## Deployment Summary
+
+In this final step, we focused on deploying the chosen Elastic Net for practical use. The model was saved using joblib, enabling easy loading and utilization for predictions.
+
+This deployment strategy allows for:
+
+- **Efficient Predictions:** The saved model can be readily loaded to generate predictions on new data, either in real-time or batch mode.
+- **Scalability:** The deployment can be scaled based on the volume of prediction requests, ensuring timely responses.
+- **Integration:** The deployed model can be integrated into existing systems or applications, providing seamless access to reliability score predictions.
+
+By successfully deploying the XGBoost model, we have empowered stakeholders to leverage the model's predictive capabilities for informed decision-making and proactive reliability management.

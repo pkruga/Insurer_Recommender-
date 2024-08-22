@@ -1,0 +1,30 @@
+
+## Feature Engineering Summary
+
+### Objectives
+
+- Enhance the predictive power of the dataset by creating new features and transforming existing ones.
+- Address potential issues like multicollinearity and missing values.
+
+### Key Steps
+
+- **Label Encoding:** Converted categorical variables ('Insurer', 'Reliability_Label') into numerical representations for compatibility with machine learning models.
+- **Quarter and Year Extraction:** Extracted quarter and year information from the 'Date' column to capture potential temporal trends.
+- **Reliability Score Creation:** Engineered a composite 'Reliability_Score' metric based on weighted combinations of claims payment, declined, and no-claims ratios. This score provides a comprehensive measure of insurer performance.
+- **Reliability Score Visualization:** Explored the distribution of the 'Reliability_Score' using histograms and identified top-performing insurers using bar plots.
+- **Multicollinearity Assessment:** Conducted Variance Inflation Factor (VIF) analysis to detect and address potential multicollinearity among numerical features.
+- **Feature Selection:** Dropped features with high VIF values or limited relevance to the target variable.
+- **Data Splitting:** Partitioned the dataset into training and testing sets to facilitate model evaluation.
+- **Normalization and Scaling:** Standardized numerical features using StandardScaler to ensure consistent scaling across variables.
+- **Missing Value Imputation:** Employed SimpleImputer to handle missing values by replacing them with the mean of the respective features.
+
+### Outcomes
+
+- The dataset is now enriched with engineered features that capture relevant information for predicting insurer reliability.
+- Potential issues like multicollinearity and missing values have been addressed, improving the dataset's suitability for modeling.
+- The normalized and imputed features are ready for use in training machine learning models.
+
+### Next Steps
+
+- Proceed with model selection, training, and evaluation using the preprocessed dataset.
+- Consider further feature engineering techniques based on model performance and domain knowledge.

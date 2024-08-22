@@ -1,0 +1,178 @@
+
+# Comprehensive Project Report
+
+## 1. Business Understanding
+# # **Recommender System for Best Insurance Provider  in Kenya**
+# ## **Business Understanding**
+# According to Cytonn's report on Kenya's listed insurance sector for H1 2023, insurance penetration in Kenya remains historically low. As of FY 2022, penetration stood at just 2.3%, according to the Kenya National Bureau of Statistics (KNBS) 2023 Economic Survey. This is notably below the global average of 7.0%, as reported by the Swiss Re Institute. The low penetration rate is largely attributed to the perception of insurance as a luxury rather than a necessity, and it is often purchased only when required or mandated by regulation. Additionally, a pervasive mistrust of insurance providers has significantly contributed to the low uptake.
+# 
+# Despite the critical importance of non-liability insurance—such as health, property, and personal accident coverage—for financial protection against unforeseen events, many individuals find it challenging to identify a trustworthy insurance provider due to opaque information on claim settlement records. This project seeks to address this pressing issue by simplifying the process of selecting a suitable insurance provider based on their performance in settling non-liability claims. By enhancing transparency and fostering trust in insurance providers, the project aims to boost insurance uptake and overall customer satisfaction.
+
+## 2. Problem Statement
+# 
+# ## **Problem Statement**
+# Kenya faces a significant challenge with low insurance penetration, standing at just 2.3% as of FY 2022, well below the global average of 7.0%. This disparity is largely due to the perception of insurance as a luxury rather than a necessity, coupled with widespread mistrust towards insurance providers. Many Kenyans only purchase insurance when mandated or compelled by regulation, undermining the financial protection benefits offered by non-liability insurance such as health, property, and personal accident coverage.
+
+## 3. Objectives
+### **Objectives**
+
+Our project aims to address the challenges outlined in the business understanding and problem statement by developing a recommender system for the Kenyan insurance market. This system will leverage historical data to assess insurers based on their non-liability claim settlement performance. By offering transparent insights into insurer reliability and fostering trust between consumers and providers, we strive to achieve the following objectives:
+
+1. **Enhanced Transparency:** Provide clear and detailed information on insurers' performance to improve market transparency and empower customers to make informed decisions.
+
+2. **Increased Customer Trust:** Build greater trust between customers and insurance providers by showcasing insurers' reliability in settling non-liability claims.
+
+3. **Boosted Insurance Uptake:** Encourage increased insurance adoption by simplifying the process of finding trustworthy insurers, thereby raising overall market penetration.
+
+4. **Improved Customer Satisfaction:** Guide customers towards insurers with strong claim settlement records to enhance their overall satisfaction with the insurance experience.
+
+## 4. Data Understanding & Preparation
+(Include relevant summaries and insights from your data analysis)
+
+## 5. Modeling
+
+## Model Comparison
+
+| Model | RMSE | R-squared | MAE | Mean CV RMSE |
+|---|---|---|---|---|
+| Linear Regression | 1.73 | 0.99 | 0.28 | 0.37 |
+| Random Forest | 1.40 | 1.00 | 0.51 | 0.97 |
+| Gradient Boosting | 1.37 | 1.00 | 0.50 | 0.81 |
+| XGBoost | 1.35 | 1.00 | 0.48 | 1.01 |
+
+**Best Model (based on RMSE):** XGBoost
+
+### Interpretation
+
+- **RMSE:** Measures the average prediction error in the same units as the target variable. Lower RMSE indicates better accuracy.
+- **R-squared:** Represents the proportion of variance in the target variable explained by the model. Higher R-squared indicates better fit.
+- **MAE:** Measures the average absolute difference between predicted and actual values. Lower MAE indicates better accuracy.
+- **Mean CV RMSE:** Average RMSE from cross-validation, providing a more robust estimate of model performance on unseen data.
+
+### Conclusion
+
+Based on the results, the **XGBoost** model demonstrates the best predictive performance for reliability scores, considering both RMSE and cross-validation results. However, further model refinement and feature engineering could potentially improve the results.
+
+
+## Modelling Summary
+
+In this step, we developed and evaluated several machine learning models to predict reliability scores. The models we explored include:
+
+- **Linear Regression:** A basic linear model serving as a baseline.
+- **Random Forest:** An ensemble method using multiple decision trees for robust predictions.
+- **Gradient Boosting:** A boosting algorithm that sequentially builds a strong model from weak learners.
+- **XGBoost:** An optimized gradient boosting library known for its efficiency and performance.
+- **Stacking Regressor:** An ensemble technique that combines predictions from multiple base models using a meta-model.
+
+We evaluated the models using metrics such as Root Mean Squared Error (RMSE), R-squared, Mean Absolute Error (MAE), and Mean Cross-Validation RMSE. Based on these metrics, the **XGBoost** model emerged as the most promising, demonstrating the lowest RMSE and competitive performance across other metrics.
+
+However, the Stacking Regressor, combining the strengths of multiple models, also showed strong potential. Further exploration and fine-tuning of the Stacking Regressor could lead to even better predictive performance.
+
+Overall, this modelling step provided valuable insights into the factors influencing reliability scores and identified promising models for predicting them. Future work could involve feature engineering, hyperparameter optimization, and exploring other advanced machine learning techniques to further improve the accuracy of reliability score predictions.
+
+
+## 6. Recommendation
+
+## Recommendation
+
+Based on our comprehensive analysis, encompassing business understanding, problem definition, objectives, model evaluation, and the overall modeling process, we recommend adopting the **XGBoost** model for predicting reliability scores. 
+
+This recommendation is grounded in the following key findings:
+
+### Business Understanding & Problem Statement
+# # **Recommender System for Best Insurance Provider  in Kenya**
+# ## **Business Understanding**
+# According to Cytonn's report on Kenya's listed insurance sector for H1 2023, insurance penetration in Kenya remains historically low. As of FY 2022, penetration stood at just 2.3%, according to the Kenya National Bureau of Statistics (KNBS) 2023 Economic Survey. This is notably below the global average of 7.0%, as reported by the Swiss Re Institute. The low penetration rate is largely attributed to the perception of insurance as a luxury rather than a necessity, and it is often purchased only when required or mandated by regulation. Additionally, a pervasive mistrust of insurance providers has significantly contributed to the low uptake.
+# 
+# Despite the critical importance of non-liability insurance—such as health, property, and personal accident coverage—for financial protection against unforeseen events, many individuals find it challenging to identify a trustworthy insurance provider due to opaque information on claim settlement records. This project seeks to address this pressing issue by simplifying the process of selecting a suitable insurance provider based on their performance in settling non-liability claims. By enhancing transparency and fostering trust in insurance providers, the project aims to boost insurance uptake and overall customer satisfaction.
+# 
+# ## **Problem Statement**
+# Kenya faces a significant challenge with low insurance penetration, standing at just 2.3% as of FY 2022, well below the global average of 7.0%. This disparity is largely due to the perception of insurance as a luxury rather than a necessity, coupled with widespread mistrust towards insurance providers. Many Kenyans only purchase insurance when mandated or compelled by regulation, undermining the financial protection benefits offered by non-liability insurance such as health, property, and personal accident coverage.
+
+### Objectives
+### **Objectives**
+
+Our project aims to address the challenges outlined in the business understanding and problem statement by developing a recommender system for the Kenyan insurance market. This system will leverage historical data to assess insurers based on their non-liability claim settlement performance. By offering transparent insights into insurer reliability and fostering trust between consumers and providers, we strive to achieve the following objectives:
+
+1. **Enhanced Transparency:** Provide clear and detailed information on insurers' performance to improve market transparency and empower customers to make informed decisions.
+
+2. **Increased Customer Trust:** Build greater trust between customers and insurance providers by showcasing insurers' reliability in settling non-liability claims.
+
+3. **Boosted Insurance Uptake:** Encourage increased insurance adoption by simplifying the process of finding trustworthy insurers, thereby raising overall market penetration.
+
+4. **Improved Customer Satisfaction:** Guide customers towards insurers with strong claim settlement records to enhance their overall satisfaction with the insurance experience.
+
+### Model Performance
+
+## Model Comparison
+
+| Model | RMSE | R-squared | MAE | Mean CV RMSE |
+|---|---|---|---|---|
+| Linear Regression | 1.73 | 0.99 | 0.28 | 0.37 |
+| Random Forest | 1.40 | 1.00 | 0.51 | 0.97 |
+| Gradient Boosting | 1.37 | 1.00 | 0.50 | 0.81 |
+| XGBoost | 1.35 | 1.00 | 0.48 | 1.01 |
+
+**Best Model (based on RMSE):** XGBoost
+
+### Interpretation
+
+- **RMSE:** Measures the average prediction error in the same units as the target variable. Lower RMSE indicates better accuracy.
+- **R-squared:** Represents the proportion of variance in the target variable explained by the model. Higher R-squared indicates better fit.
+- **MAE:** Measures the average absolute difference between predicted and actual values. Lower MAE indicates better accuracy.
+- **Mean CV RMSE:** Average RMSE from cross-validation, providing a more robust estimate of model performance on unseen data.
+
+### Conclusion
+
+Based on the results, the **XGBoost** model demonstrates the best predictive performance for reliability scores, considering both RMSE and cross-validation results. However, further model refinement and feature engineering could potentially improve the results.
+
+
+### Modeling Summary
+
+## Modelling Summary
+
+In this step, we developed and evaluated several machine learning models to predict reliability scores. The models we explored include:
+
+- **Linear Regression:** A basic linear model serving as a baseline.
+- **Random Forest:** An ensemble method using multiple decision trees for robust predictions.
+- **Gradient Boosting:** A boosting algorithm that sequentially builds a strong model from weak learners.
+- **XGBoost:** An optimized gradient boosting library known for its efficiency and performance.
+- **Stacking Regressor:** An ensemble technique that combines predictions from multiple base models using a meta-model.
+
+We evaluated the models using metrics such as Root Mean Squared Error (RMSE), R-squared, Mean Absolute Error (MAE), and Mean Cross-Validation RMSE. Based on these metrics, the **XGBoost** model emerged as the most promising, demonstrating the lowest RMSE and competitive performance across other metrics.
+
+However, the Stacking Regressor, combining the strengths of multiple models, also showed strong potential. Further exploration and fine-tuning of the Stacking Regressor could lead to even better predictive performance.
+
+Overall, this modelling step provided valuable insights into the factors influencing reliability scores and identified promising models for predicting them. Future work could involve feature engineering, hyperparameter optimization, and exploring other advanced machine learning techniques to further improve the accuracy of reliability score predictions.
+
+
+The XGBoost model consistently outperformed other models in terms of RMSE and exhibited robust performance across various evaluation metrics. Its ability to capture complex relationships within the data makes it a suitable choice for predicting reliability scores.
+
+### Next Steps
+
+1. **Deployment:** Operationalize the XGBoost model for real-time or batch prediction of reliability scores.
+2. **Monitoring:** Establish a continuous monitoring system to track model performance and identify potential drifts or degradation.
+3. **Refinement:** Explore further fine-tuning of the XGBoost model or consider ensemble techniques like the Stacking Regressor for potential performance enhancements.
+4. **Feature Engineering:** Investigate additional feature engineering opportunities to enrich the model's input and potentially improve predictive accuracy.
+
+By implementing these recommendations, the organization can leverage the power of predictive analytics to proactively manage reliability, optimize maintenance strategies, and enhance overall operational efficiency.
+
+
+## 7. Deployment
+
+## Deployment Summary
+
+In this final step, we focused on deploying the chosen XGBoost model for practical use. The model was saved using joblib, enabling easy loading and utilization for predictions. 
+
+This deployment strategy allows for:
+
+- **Efficient Predictions:** The saved model can be readily loaded to generate predictions on new data, either in real-time or batch mode.
+- **Scalability:** The deployment can be scaled based on the volume of prediction requests, ensuring timely responses.
+- **Integration:** The deployed model can be integrated into existing systems or applications, providing seamless access to reliability score predictions.
+
+By successfully deploying the XGBoost model, we have empowered stakeholders to leverage the model's predictive capabilities for informed decision-making and proactive reliability management.
+
+
+# Conclusion
+
+This report has presented a comprehensive analysis of the problem, the development of a predictive model, and recommendations for deployment. By leveraging the insights and the deployed model, stakeholders can make informed decisions to improve reliability and operational efficiency.

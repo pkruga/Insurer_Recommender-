@@ -43,16 +43,16 @@ st.header("Select Insurer and Rating Metrics")
 insurers = df['Insurer'].unique()
 selected_insurer = st.selectbox('Pick Insurer', insurers)
 
-# Year selection
-years = df['Year']
-selected_year = st.selectbox('Select Year', sorted(years))
+# Year selection (2018 to 2024)
+years = list(range(2018, 2025))
+selected_year = st.selectbox('Select Year', years)
 
-# Quarter selection
-quarters = ['Quarter']
-selected_quarter = st.selectbox('Select Quarter', sorted(quarters))
+# Quarter selection (1 to 4)
+quarters = [1, 2, 3, 4]
+selected_quarter = st.selectbox('Select Quarter', quarters)
 
 # Filter data based on selections
-filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == quarters.index(selected_quarter) + 1)]
+filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == selected_quarter)]
 
 if filtered_data.empty:
     st.write("No data available for the selected period.")
@@ -77,4 +77,4 @@ else:
 
     # Predict reliability score
     prediction = model.predict(features)
-    st.write(f"Predicted Reliability Score for {selected_insurer} in {selected_year} {selected_quarter}: {prediction[0]:.2f}")
+    st.write(f"Predicted Reliability Score for {selected_insurer} in {selected_year} Q{selected_quarter}: {prediction[0]:.2f}")

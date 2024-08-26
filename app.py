@@ -28,10 +28,7 @@ st.markdown("""
 model = joblib.load('en_model.pkl')
 
 # Load the dataset
-df = pd.read_csv('cleaned_data.csv')
-
-# Convert 'Date' column to datetime format
-df['Date'] = pd.to_datetime(df['Date'])
+df = pd.read_csv('insurance_data_with_reliability.csv')
 
 # Streamlit app
 st.title("Insurance Provider Recommender")
@@ -47,7 +44,7 @@ insurers = df['Insurer'].unique()
 selected_insurer = st.selectbox('Pick Insurer', insurers)
 
 # Year selection
-years = df['Year'].dt.year.unique()
+years = df['Year']
 selected_year = st.selectbox('Select Year', sorted(years))
 
 # Quarter selection
@@ -55,7 +52,7 @@ quarters = ['Quarter']
 selected_quarter = st.selectbox('Select Quarter', sorted(quarters))
 
 # Filter data based on selections
-filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Date'].dt.year == selected_year) & (df['Quarter'].dt.quarter == quarters.index(selected_quarter) + 1)]
+filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == quarters.index(selected_quarter) + 1)]
 
 if filtered_data.empty:
     st.write("No data available for the selected period.")

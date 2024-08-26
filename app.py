@@ -4,12 +4,12 @@ import joblib
 import numpy as np
 
 # Display header images
-st.image(['images/Insurers.png', 'images/background image.jpeg'], width=600, use_column_width=True)
+st.image(['IMAGES/Insurers.png', 'IMAGES/background image.jpeg'], width=600, use_column_width=True)
 
 st.markdown("""
     <style>
     .stApp {
-        background-image: url('images/802169.jpg');
+        background-image: url('IMAGES/802169.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -28,7 +28,7 @@ st.markdown("""
 model = joblib.load('en_model.pkl')
 
 # Load the dataset
-df = pd.read_csv('csv/insurance_data_with_reliability.csv')
+df = pd.read_csv('CSV/insurance_data_with_reliability.csv')
 
 # Streamlit app
 st.title("Insurance Provider Recommender")

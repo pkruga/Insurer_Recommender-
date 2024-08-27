@@ -42,7 +42,7 @@ st.header("Select Insurer and Rating Metrics")
 # Insurer section
 # Read the years from the markdown file
 with open('insurers.md', 'r') as f:
-  insurers_list = [line.strip('- ').strip() for line in f.readlines() if line.strip()]
+  insurers_list = [line.strip('- ').strip() for line in f.readlines() if line.strip() and not line.startswith('#')]
 
 # Check if the number of insurers matches the number of encoded values
 

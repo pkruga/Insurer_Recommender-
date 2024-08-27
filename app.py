@@ -28,7 +28,7 @@ st.markdown("""
 model = joblib.load('en_model.pkl')
 
 # Load the dataset
-df = pd.read_csv('CSV/concatenated_df')
+df = pd.read_csv('CSV/deployment_data.csv')
 
 # Streamlit app
 st.title("Insurance Provider Recommender")

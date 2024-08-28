@@ -1,4 +1,6 @@
 streamlit
+scikit-learn
+pystacknet
 joblib
-elasticnet
 pandas
+

@@ -1,6 +1,5 @@
 streamlit
 scikit-learn
-pystacknet
 joblib
 pandas
-
+numpy

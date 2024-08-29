@@ -24,7 +24,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Load the trained XGBoost model
+# Load the trained Ensemble Stacking model
 model = joblib.load('stacking_model.pkl')
 
 # Load the dataset

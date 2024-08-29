@@ -51,8 +51,12 @@ selected_year = st.selectbox('Select Year', sorted(years))
 quarters = df['Quarter'].unique()
 selected_quarter = st.selectbox('Select Quarter', quarters)
 
+#Reliability Label
+reliability_labels = df['Reliability_Label'].unique()
+selected_reliability_label = reliability_labels[0]
+
 # Filter data based on selections
-filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == selected_quarter)]
+filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == selected_quarter) & (df['Reliability_Label'] == selected_reliability_label)]
 
 if filtered_data.empty:
     st.write("No data available for the selected period.")
@@ -66,4 +70,4 @@ else:
 
     # Predict reliability score
     prediction = model.predict(features)
-    st.write(f"Predicted Reliability Score for {selected_insurer} in {selected_year} Q{selected_quarter}: {prediction[0]:.2f}")
+    st.write(f"Predicted Reliability Score for {selected_insurer} in {selected_year} Q{selected_quarter}: {prediction[0]:.2f}, {selected_reliability_label}")

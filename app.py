@@ -51,12 +51,16 @@ selected_year = st.selectbox('Select Year', sorted(years))
 quarters = df['Quarter'].unique()
 selected_quarter = st.selectbox('Select Quarter', quarters)
 
-#Reliability Label
-reliability_labels = df['Reliability_Label'].unique()
-selected_reliability_label = reliability_labels[0]
-
 # Filter data based on selections
-filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == selected_quarter) & (df['Reliability_Label'] == selected_reliability_label)]
+filtered_data = df[(df['Insurer'] == selected_insurer) & (df['Year'] == selected_year) & (df['Quarter'] == selected_quarter)]
+
+# Reliability Label
+if not filtered_data.empty:
+    # Get unique reliability labels from the filtered data
+    reliability_labels = filtered_data['Reliability_Label'].unique()
+    selected_reliability_label = reliability_labels[0] if len(reliability_labels) > 0 else None
+else:
+    selected_reliability_label = None
 
 if filtered_data.empty:
     st.write("No data available for the selected period.")
